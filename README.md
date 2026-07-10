@@ -165,8 +165,7 @@ This project was developed collaboratively as part of a college MERN Stack proje
 - Arshiya Shaik Nannu
 - Kolluri Sai Sravani
 - Vadla RamyaSri
-- Pavani Na
-dinti
+- Pavani Nadinti
 
 ---
 
