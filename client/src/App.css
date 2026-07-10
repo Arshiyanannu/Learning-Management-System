@@ -1,0 +1,81 @@
+/* extra css used by app.jsx*/
+/* .page-container{
+    max-width:1200px;
+    margin:0 auto;
+    padding:1.5rem;
+}
+
+.card{
+    background:white;
+    border-radius:12px;
+    box-shadow:0 1px 3px rgba(0,0,0,.1);
+    padding:20px;
+}
+
+.fade-in{
+    animation:fadeIn .3s ease-in-out;
+}
+
+@keyframes fadeIn{
+
+from{
+opacity:0;
+transform:translateY(4px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+} 
+ */
+
+ /* Core application layout wraps */
+.page-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+/* Premium elevated cards */
+.card {
+    background: #ffffff;
+    border: 1px solid rgba(226, 232, 240, 0.8); /* subtle border line */
+    border-radius: 16px; /* modern softer corners */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    transition: all 0.2s ease-in-out;
+}
+
+/* Glassmorphism accent utility */
+.glass-panel {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Clean micro-interactions */
+.interactive-hover {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.interactive-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+/* Smooth fade-in presentation */
+.fade-in {
+    animation: slideUpFade 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideUpFade {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
