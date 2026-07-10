@@ -1,103 +1,174 @@
-# EduLMS - Full-Stack Learning Management System Engine
+# 🎓 Learning Management System (LMS)
 
-EduLMS is a production-ready, modular Learning Management System (LMS) built on the MERN stack. The platform features an adaptive, open course catalog framework designed to handle administrative management layouts and student learning progress tracking interfaces seamlessly.
-
----
-
-## 🏛️ Application Architecture Overview
-
-The system is split into two cleanly decoupled root modules designed to run simultaneously across distinct local network ports:
-
-* **`client/`**: A React single-page web view application structured with custom navigation trees, lifecycle loading state safeguards, and dynamic context-driven role layout gating.
-* **`server/`**: A robust RESTful Node.js and Express API service engine configured with automated Mongoose data indexing, bcrypt credential encryption hooks, and JSON Web Token (JWT) session generation protocols.
+A full-stack Learning Management System (LMS) developed using the MERN Stack. The application provides a platform for administrators to manage courses and enables students to browse, enroll, and access course information through a secure and responsive web interface.
 
 ---
 
-## 🚀 Step-by-Step Installation & Local Deployment Guide
+## 📌 Project Status
 
-Follow these sequential steps to establish dependency environments, prepare local configurations, seed test data metrics, and boot the application engine.
-
-### Prerequisites
-Ensure you have downloaded and initialized the following environment stacks on your machine:
-* [Node.js (v18+ Recommended)](https://nodejs.org/)
-* [MongoDB Community Server & MongoDB Compass](https://www.mongodb.com/try/download/community)
+🚧 This project is currently under active development as part of a college MERN Stack project. Additional features and UI improvements are being implemented.
 
 ---
 
-### Step 1: Initialize Database Connectivity Configurations
-Navigate into your backend root folder:
+## 🚀 Features
+
+### 👨‍🎓 Student Module
+- User Registration and Login
+- Secure JWT Authentication
+- Browse Available Courses
+- View Course Details
+- Enroll in Courses
+- Student Dashboard
+- User Profile
+
+### 👨‍🏫 Admin Module
+- Secure Admin Login
+- Create New Courses
+- Edit Existing Courses
+- Delete Courses
+- Manage Course Content
+- Admin Dashboard
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- React.js
+- Vite
+- Tailwind CSS
+- React Router DOM
+- Axios
+- React Toastify
+- React Icons
+
+### Backend
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- JWT Authentication
+- bcrypt.js
+
+---
+
+## 📁 Project Structure
+
+```text
+Learning-Management-System
+│
+├── client
+│   ├── src
+│   ├── public
+│   ├── package.json
+│   └── vite.config.js
+│
+├── server
+│   ├── config
+│   ├── controllers
+│   ├── middleware
+│   ├── models
+│   ├── routes
+│   ├── server.js
+│   └── package.json
+│
+└── README.md
+```
+
+---
+
+## ⚙️ Installation
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/Arshiyanannu/Learning-Management-System.git
+```
+
+### 2. Backend Setup
+
 ```bash
 cd server
+npm install
+```
 
-Create a new file named exactly .env directly inside the server/ directory. Open it and declare your system gateway variables matching this blueprint:
+Create a `.env` file inside the `server` folder.
 
-Ini, TOML
+```env
 PORT=5000
 MONGO_URI=mongodb://127.0.0.1:27017/edulms
-JWT_SECRET=your_secret_assignment_key_2026_lms
-JWT_EXPIRES_IN=7d
-Note: Reference the provided blueprint guide inside .env.example to review required production variable names without exposing live system execution keys.
+JWT_SECRET=your_secret_key
+```
 
-Step 2: Establish Backend Dependencies & Seed Sample Datasets
-While still inside the server/ directory, run the clean package installation step to build your local node_modules structure:
+Start the backend server:
 
-Bash
-npm install
-Once packages finish downloading, run the specialized database seed helper utility script once. This connects directly to your active local MongoDB instance, drops existing records to avoid compilation duplicates, generates a default supervisor/instructor profile matrix, and inserts baseline sample courses:
+```bash
+npm run dev
+```
 
-Bash
-node seed.js
-Seeded Credentials For Project Evaluation:
+### 3. Frontend Setup
 
-Role Type: System Administrator / Course Instructor
+Open another terminal.
 
-Email: instructor@edulms.com
-
-Password: password123
-
-Step 3: Establish Frontend Client Dependencies
-Open a second, separate command terminal window alongside your backend terminal interface, and navigate into your React user interface workspace folder:
-
-Bash
+```bash
 cd client
-Execute the local package assembly command string to download mandatory view routing engines and component icon bundles:
-
-Bash
 npm install
-Step 4: Boot the Runtime Engines
-To run and test the complete application network, ensure both server loops remain executing simultaneously across your terminal layouts.
-
-In your Backend Terminal (server/ folder):
-
-Bash
 npm run dev
-The terminal window will print confirmation logs indicating Server running on port 5000 and MongoDB Connected: 127.0.0.1.
+```
 
-In your Frontend Terminal (client/ folder):
+The application will be available at:
 
-Bash
-npm run dev
-The terminal interface will output a local browser network address link (typically http://localhost:5173). Click the address to initialize your evaluation view testing!
+```text
+http://localhost:5173
+```
 
-🛠️ Main Features & API Endpoint Routing Schemes
-Authentication Routing Paths (/api/auth)
-POST /api/auth/register — Registers a student or instructor user account directly to MongoDB while applying automated pre-save password encryption hashing.
+---
 
-POST /api/auth/login — Evaluates data model records, cross-checks custom user compare methods, and returns a session-signed JWT cookie token.
+## 🌱 Sample Data
 
-GET /api/auth/me — Private profile access path parsing client tokens to load user detail configurations safely.
+Run the database seed script to populate the database with sample users and courses.
 
-Curriculum Management Routing Paths (/api/courses)
-GET /api/courses — Public registry browsing module mapping available educational course tracks.
+```bash
+cd server
+node seed.js
+```
 
-POST /api/courses — Private structural route restricted to Admin tokens to initialize empty metadata blueprints or attach rich sub-schema module lesson arrays.
+This will generate default administrator credentials for testing. Refer to the `seed.js` file for the generated account details.
 
-DELETE /api/courses/:id — Purges targeted course records out of database schema indices cleanly.
+---
 
-Progress and Enrollment Tracks (/api/enrollments)
-POST /api/enrollments — Student restricted route enabling open course tracking registrations.
+## 📸 Screenshots
 
-GET /api/enrollments/my — Pulls live individual enrollment states and populates detailed data grids.
+Project screenshots will be added after the final UI redesign.
 
-👥 Contributor Architecture
-Developed as a core engineering capability showcase piece for full-stack portfolio evaluation metrics.
+---
+
+## 🌟 Future Enhancements
+
+- Course Progress Tracking
+- Video Lessons
+- Quiz Module
+- Certificate Generation
+- Email Notifications
+- Dark Mode
+- Course Search & Filtering
+- Progress Analytics
+
+---
+
+## 👥 Team
+
+This project was developed collaboratively as part of a college MERN Stack project.
+
+**Team Members**
+
+- Arshiya Shaik Nannu
+- Kolluri Sai Sravani
+- Vadla RamyaSri
+- Pavani
+
+---
+
+## 📄 License
+
+This project is developed for educational purposes only.
