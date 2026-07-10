@@ -24,7 +24,7 @@ const CourseCard = ({ course, onEnroll, isEnrolled }) => {
       onClick={handleCardClick}
       className="card border border-slate-200/60 p-5 bg-white rounded-2xl shadow-sm interactive-hover cursor-pointer flex flex-col group"
     >
-      {/* Decorative Multimedia Banner Block */}
+      {/* Decorative Multimedia Banner Block — RESTORED TO ORIGINAL DEFAULT BOOK ICON */}
       <div className="h-36 w-full rounded-xl bg-slate-900 overflow-hidden flex items-center justify-center mb-4 relative">
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_16px]"></div>
         <div className="absolute top-0 right-0 w-24 h-24 bg-indigo-500/10 rounded-full blur-xl transition-all group-hover:scale-120"></div>

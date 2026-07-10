@@ -1,37 +1,3 @@
-/* extra css used by app.jsx*/
-/* .page-container{
-    max-width:1200px;
-    margin:0 auto;
-    padding:1.5rem;
-}
-
-.card{
-    background:white;
-    border-radius:12px;
-    box-shadow:0 1px 3px rgba(0,0,0,.1);
-    padding:20px;
-}
-
-.fade-in{
-    animation:fadeIn .3s ease-in-out;
-}
-
-@keyframes fadeIn{
-
-from{
-opacity:0;
-transform:translateY(4px);
-}
-
-to{
-opacity:1;
-transform:translateY(0);
-}
-
-} 
- */
-
- /* Core application layout wraps */
 .page-container {
     max-width: 1280px;
     margin: 0 auto;
