@@ -94,7 +94,7 @@ npm install
 
 Create a `.env` file inside the `server` folder.
 
-```env
+```env  
 PORT=5000
 MONGO_URI=mongodb://127.0.0.1:27017/edulms
 JWT_SECRET=your_secret_key
