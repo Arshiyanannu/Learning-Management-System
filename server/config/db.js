@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const connectDB = async () => {
   try {
     // Hardcode your production fallback string directly here
-    const dbURI = process.env.MONGO_URI || "mongodb+srv://Admin:YourActualPasswordHere@cluster0.dxjbvce.mongodb.net/edulms?retryWrites=true&w=majority";
+    const dbURI = process.env.MONGO_URI || "mongodb+srv://Admin:arshiya21@cluster0.dxjbvce.mongodb.net/edulms?retryWrites=true&w=majority";
 
     const conn = await mongoose.connect(dbURI);
     console.log(`MongoDB Connected: ${conn.connection.host}`);
